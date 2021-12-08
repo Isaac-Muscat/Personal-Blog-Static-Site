@@ -1,3 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer components {
+	.navbtn-green {
+	  @apply px-3 py-2 rounded text-white font-bold items-center overflow-hidden;
+	  @apply transition duration-500 ease-in-out hover:bg-white hover:text-black transform hover:scale-110;
+	}
+  }
