@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   const router = useRouter();
   const navBar = (
     <nav className="bg-black items-center p-3">
-      <div className="w-full flex flex-row">
+      <div className="justify-center space-x-10 w-full flex flex-row">
         <Link href="/">
           <a className="navbtn-green">
             Home
@@ -24,12 +24,12 @@ export default function Layout({ children }) {
       </div>
     </nav>
   );
-  const footer = <h1>This is a footer</h1>;
+  const footer = <h1></h1>;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex justify-between flex-col h-screen">
       <header>{navBar}</header>
-      <main>{children}</main>
+      <main className="mb-auto">{children}</main>
       <footer>{footer}</footer>
     </div>
   );
