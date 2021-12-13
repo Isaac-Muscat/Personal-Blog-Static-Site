@@ -4,13 +4,12 @@ import Date from "../components/date";
 
 export default function Post({ post }) {
 	return (
-		<div className="bg-blue-400 flex-1 rounded shadow-md border border-gray-200 m-6">
-			<div className="p-3 text-white">
+		<div className="bg-white flex-1 rounded shadow-lg border-4 border-blue-600 m-6">
+			<div className="p-3 flex flex-col text-blue-600 ">
 				<Link href={`/posts/${post.title}`}>
-					<a>{post.title}</a>
+					<a className="text-center text-2xl font-bold">{post.title}</a>
 				</Link>
-				<br />
-				<Date dateString={post.date} />
+				<Date className="align-text-bottom" dateString={post.date} />
 			</div>
 		</div>
 	);

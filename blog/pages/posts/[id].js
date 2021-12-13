@@ -11,12 +11,11 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      {postData.title}
-      <br />
-      {postData.name}
-      <br />
-      <Date dateString={postData.date} />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <h1 className="text-black">{postData.title}</h1>
+      <div className="text-center text-blue-500 font-semibold text-lg"><Date dateString={postData.date} /></div>
+      <div className="flex flex-row">
+        <div className="bg-white text-black text-left m-3 px-10 lg:mx-80 rounded-lg shadow-lg border-blue-600 border-4" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </div>
     </Layout>
   );
 }

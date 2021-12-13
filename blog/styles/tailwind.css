@@ -5,6 +5,39 @@
 @layer components {
 	.navbtn-green {
 	  @apply px-3 py-2 rounded text-white font-bold items-center overflow-hidden;
-	  @apply transition duration-500 ease-in-out hover:bg-white hover:text-black transform hover:scale-110;
+	  @apply transition duration-500 ease-in-out hover:bg-white hover:text-blue-600 transform hover:scale-110;
 	}
   }
+
+@layer base {
+	li {
+		list-style-type: disc;
+		@apply ml-10;
+	}
+
+	li, p {
+		@apply text-lg tracking-wide;
+	}
+
+	h1, h2, h3, h4, p {
+		@apply my-2;
+	}
+
+	h1 {
+		@apply text-5xl font-bold text-center my-5;
+	}
+
+	h2 {
+		@apply text-4xl font-bold;
+	}
+
+	h3 {
+		@apply text-3xl font-bold;
+	}
+
+	h4 {
+		@apply text-2xl font-bold;
+	}
+
+
+}
