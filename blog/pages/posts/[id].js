@@ -20,7 +20,7 @@ export default function Post({ postData }) {
           <img className="object-cover w-2/3 rounded-xl my-5" src={`${postData.coverImage}`}/>
         </div>
         <div className="flex flex-row">
-          <ReactMarkdown className="content-block" children={postData.content} components={components}/>
+          <ReactMarkdown className="content-block" components={components}>{postData.content}</ReactMarkdown>
         </div>
       </div>
     </Layout>
