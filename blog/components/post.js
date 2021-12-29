@@ -1,10 +1,11 @@
-
+import Image from "next/image";
 import Link from "next/link";
 import Date from "../components/date";
 
 export default function Post({ post }) {
 	return (
-		<div className="bg-white flex-1 rounded shadow-lg border-4 border-blue-600 m-6">
+		<div className="flex flex-row bg-white rounded shadow-lg border-4 border-blue-600 m-6">
+			<img className="object-cover w-32" src={`${post.coverImage}`} />
 			<div className="p-3 flex flex-col text-blue-600 ">
 				<Link href={`/posts/${post.title}`}>
 					<a className="text-center text-2xl font-bold">{post.title}</a>

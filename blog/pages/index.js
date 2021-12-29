@@ -1,6 +1,9 @@
 import { useSpring, animated, useSpringRef, useChain, useTransition } from "react-spring";
 import { useState } from "react";
 
+import Image from "next/image";
+import Link from "next/link";
+
 
 import { getSortedPostsData } from "../scripts/posts";
 
@@ -33,13 +36,40 @@ export default function Home({ postData }) {
 		<Layout>
 			<div>
 				<div className="p-10 h-screen flex items-center justify-center flex-col">
-					<animated.h1 style={props} className="font-bold text-b md:text-9xl text-center text-7xl"> Isaac Muscat</animated.h1>
+					<animated.h1 style={props} className="font-bold text-b md:text-9xl text-center text-7xl">Welcome</animated.h1>
 					{transitions(styles => (
 						<animated.h2 style={styles} className="font-bold text-blue-600 md:text-3xl text-center text-2xl"> Hello, thanks for visiting</animated.h2>
 					))}
+					<div className="flex flex-wrap justify-center">
+						<div className="justify-center space-x-10 w-full flex flex-wrap flex-row text-xl">
+							<Link href="https://github.com/Isaac-Muscat">
+								<a className="navbtn text-black bg-white flex">
+									<Image src="/images/GitHub-Mark.png" width={50} height={50} />
+									GitHub
+								</a>
+							</Link>
+							<Link href="https://www.linkedin.com/in/isaac-muscat-joy/">
+							<a className="navbtn text-black bg-white flex">
+								<Image src="/images/LinkedIn-Icon.png" width={40} height={40} />
+								&nbsp; LinkedIn
+							</a>
+							</Link>
+						</div>
+					</div>
 				</div>
+				<div className="flex items-center justify-center flex-col bg-green-600">
+					<h1 className="text-white">Introduction</h1>
+					<Image src={"/images/BirdProfilePic.jpeg"} className="rounded-full" width={200} height={200} />
+					<p className="font-bold text-white mx-20 p-2">
+						My name is Isaac Muscat and welcome to my site!
+						This site has a portfolio of some projects I have worked on
+						and a blog page where I document project work, my thoughts
+						on them, and other topics.
+					</p>
+				</div>
+				<br />
 				<div className="">
-					<div className="bg-blue-600 rounded-lg border border-black-200 lg:mx-80">
+					<div className="bg-blue-600 rounded-lg border border-black-200 lg:mx-60">
 						<h2 className="font-bold text-white text-center text-b text-7xl p-3">Blog</h2>
 						<div className="flex justify-between flex-col">
 							{postData.slice(0, 3).map((post) => (

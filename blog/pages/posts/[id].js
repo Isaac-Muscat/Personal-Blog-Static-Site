@@ -1,23 +1,46 @@
-import Head from "next/head";
+import ReactMarkdown from "react-markdown";
+import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import { getAllPostIds, getPostData } from "../../scripts/posts";
 
 import Layout from "../../components/layout";
 import Date from "../../components/date";
 
+
 export default function Post({ postData }) {
   return (
     <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <h1 className="text-black">{postData.title}</h1>
-      <div className="text-center text-blue-500 font-semibold text-lg"><Date dateString={postData.date} /></div>
-      <div className="flex flex-row">
-        <div className="bg-white text-black text-left m-3 px-10 lg:mx-80 rounded-lg shadow-lg border-blue-600 border-4" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div className="flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col items-center mb-10 shadow-lg">
+          <h1 className="text-black">{postData.title}</h1>
+          <div className="text-center text-blue-500 font-semibold text-lg">
+            <Date dateString={postData.date} />
+          </div>
+          <img className="object-cover w-2/3 rounded-xl my-5" src={`${postData.coverImage}`}/>
+        </div>
+        <div className="flex flex-row">
+          <ReactMarkdown className="content-block" children={postData.content} components={components}/>
+        </div>
       </div>
     </Layout>
   );
+}
+
+const components = {
+  image: image => {
+    return <Image src={image.properties.src} alt={image.alt} height="200" width="355" />
+  },
+  code: c => {
+    return (
+      <SyntaxHighlighter
+        language={c.className.split("-")[1]}
+        showLineNumbers
+      >
+        {c.children}
+      </SyntaxHighlighter>
+    );
+  }
 }
 
 export async function getStaticPaths() {
@@ -32,7 +55,7 @@ export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   return {
     props: {
-      postData,
+      postData
     },
   };
 }

@@ -9,20 +9,20 @@ export default function Layout({ children }) {
       <Head>
 				<title>Isaac Muscat</title>
 			</Head>
-      <div className="justify-center space-x-10 w-full flex flex-row text-xl">
+      <div className="justify-center space-x-10 w-full flex flex-wrap flex-row text-xl">
         <Link href="/">
-          <a className="navbtn-green">
+          <a className="navbtn">
             Home
           </a>
         </Link>
-        <Link href="/About">
-          <a className="navbtn-green">
-            About
+        <Link href="/Projects">
+          <a className="navbtn">
+            Projects
           </a>
         </Link>
-        <Link href="/CodingExperiments">
-          <a className="navbtn-green">
-            Projects
+        <Link href="/Blog">
+          <a className="navbtn">
+            Blog
           </a>
         </Link>
       </div>
@@ -31,9 +31,9 @@ export default function Layout({ children }) {
   const footer = <h1 className="my-80"></h1>;
 
   return (
-    <div className="flex justify-between flex-col h-screen">
-      <header>{navBar}</header>
-      <main className="mb-auto">{children}</main>
+    <div className="width-auto">
+      <header className="sticky top-0 z-50">{navBar}</header>
+      <main className="mb-auto relative">{children}</main>
       <footer>{footer}</footer>
     </div>
   );

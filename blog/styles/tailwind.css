@@ -3,13 +3,18 @@
 @import "tailwindcss/utilities";
 
 @layer components {
-	.navbtn-green {
-	  @apply px-3 py-2 rounded text-white font-bold items-center overflow-hidden;
+	.navbtn {
+	  @apply px-3 py-2 rounded text-white font-bold items-center;
 	  @apply transition duration-500 ease-in-out hover:bg-white hover:text-blue-600 transform hover:scale-110;
+	}
+
+	.content-block {
+		@apply bg-white text-left mx-3 px-10 lg:mx-40 xl:mx-80 rounded-lg shadow-lg border-blue-600 border-4;
 	}
   }
 
 @layer base {
+
 	li {
 		list-style-type: disc;
 		@apply ml-10;
