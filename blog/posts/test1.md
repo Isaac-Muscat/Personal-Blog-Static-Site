@@ -2,6 +2,13 @@
 title: "When to Use Static Generation v.s. Server-side Rendering"
 date: "2020-01-02"
 coverImage: "/images/BlenderNature.PNG"
+tags: [
+  "NextJS",
+  "NextJS",
+  "NextJSdfasdfasdfasdfdsafasdfasdf",
+  "NextJSdfasdfasdfasdfdsafasdfasdf",
+  "NextJSdfasdfasdfasdfdsafasdfasdf",
+]
 ---
 
 # Cool image Eh?
@@ -11,7 +18,7 @@ coverImage: "/images/BlenderNature.PNG"
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
 ```java
-public static void main(String[] args) {
+public static void main(String[] args) sdfasdfasdfasdfasdsdffffffffffffffffdsfdfasdfa {
   System.out.Println("Hello");
 }
 ```

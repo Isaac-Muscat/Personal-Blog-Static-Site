@@ -5,12 +5,19 @@ import Date from "../components/date";
 export default function Post({ post }) {
 	return (
 		<div className="flex flex-col sm:flex-row bg-white rounded shadow-lg border-4 border-blue-600 m-6">
-			<img className="object-cover h-32 sm:w-32" src={`${post.coverImage}`} />
-			<div className="p-3 flex flex-col text-blue-600 ">
+			<img className="object-cover h-min sm:w-64" src={`${post.coverImage}`} />
+			<div className="p-3 flex flex-col text-blue-600 space-y-2 w-full">
 				<Link href={`/posts/${post.title}`}>
-					<a className="text-center text-2xl font-bold">{post.title}</a>
+					<a className="text-left text-2xl font-bold">{post.title}</a>
 				</Link>
 				<Date className="align-text-bottom" dateString={post.date} />
+				<div className="flex flex-wrap text-center font-bold text-white space-x-2 text-sm">
+					{
+						post.tags.slice(0,5).map((tag) => (
+							<div className="rounded bg-green-500 flex-initial p-2">{tag}</div>
+						))
+					}
+				</div>
 			</div>
 		</div>
 	);

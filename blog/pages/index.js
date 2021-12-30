@@ -68,13 +68,15 @@ export default function Home({ postData }) {
 					</p>
 				</div>
 				<br />
-				<div className="">
-					<div className="bg-blue-600 rounded-lg border border-black-200 lg:mx-60">
+				<div className="w-full flex justify-center">
+					<div className="bg-blue-600 rounded-lg border border-black-200 lg:w-3/5">
 						<h2 className="font-bold text-white text-center text-b text-7xl p-3">Blog</h2>
 						<div className="flex justify-between flex-col">
-							{postData.slice(0, 3).map((post) => (
-								<Post key={post.title} post={post}/>
-							))}
+							{
+								postData.slice(0, 3).map((post) => (
+									<Post key={post.title} post={post}/>
+								))
+							}
 						</div>
 					</div>
 				</div>
