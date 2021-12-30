@@ -28,12 +28,12 @@ export default function Layout({ children }) {
       </div>
     </nav>
   );
-  const footer = <h1 className="my-80"></h1>;
+  const footer = <h1 className="my-40"></h1>;
 
   return (
-    <div className="width-auto">
+    <div className="w-full">
       <header className="sticky top-0 z-50">{navBar}</header>
-      <main className="mb-auto relative">{children}</main>
+      <main className="mb-auto">{children}</main>
       <footer>{footer}</footer>
     </div>
   );
