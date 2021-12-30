@@ -13,7 +13,7 @@ export default function Post({ post }) {
 				<Date className="align-text-bottom" dateString={post.date} />
 				<div className="flex flex-wrap text-center font-bold text-white space-x-2 text-sm">
 					{
-						post.tags.slice(0,5).map((i, tag) => (
+						post.tags.slice(0,5).map((tag, i) => (
 							<div key={i} className="rounded bg-green-500 flex-initial p-2">{tag}</div>
 						))
 					}
