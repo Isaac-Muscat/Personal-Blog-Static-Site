@@ -22,8 +22,8 @@ export default function Post({ postData }) {
             <h3 className="w-full text-blue-600">Tags </h3>
             <br />
             {
-              postData.tags.slice().map((tag) => (
-                <div className="rounded bg-green-400 flex-initial p-2 m-2 text-white">{tag}</div>
+              postData.tags.slice().map((i, tag) => (
+                <div key={i} className="rounded bg-green-400 flex-initial p-2 m-2 text-white">{tag}</div>
                 ))
               }
           </div>
