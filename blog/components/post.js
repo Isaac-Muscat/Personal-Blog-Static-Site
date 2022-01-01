@@ -4,12 +4,10 @@ import Date from "../components/date";
 
 export default function Post({ post }) {
 	return (
-		<div className="flex flex-col sm:flex-row bg-white rounded shadow-lg border-4 border-blue-600 m-6">
+		<div className="flex flex-col sm:flex-row bg-white shadow-lg">
 			<img className="object-cover h-min sm:w-64" src={`${post.coverImage}`} />
 			<div className="p-3 flex flex-col text-blue-600 space-y-2 w-full">
-				<Link href={`/posts/${post.title}`}>
-					<a className="text-left text-2xl font-bold">{post.title}</a>
-				</Link>
+				<p className="text-left text-2xl font-bold">{post.title}</p>
 				<Date className="align-text-bottom" dateString={post.date} />
 				<div className="flex flex-wrap text-center font-bold text-white space-x-2 text-sm">
 					{

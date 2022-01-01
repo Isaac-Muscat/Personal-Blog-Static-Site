@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import { getSortedPostsData } from "../scripts/posts";
 import Post from "../components/post";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Blog({postData}) {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -52,11 +53,17 @@ export default function Blog({postData}) {
 					})
 				}
 			</div>
-			<div className="flex justify-between flex-col">
+			<div className="flex justify-between flex-col p-6 space-y-6">
 				{
 					postData.map(post => {
 						if(isPostInSearch(post)){
-							return <Post key={post.title} post={post} />
+							return (
+								<Link href={`/posts/${post.title}`}>
+									<a>
+										<Post key={post.title} post={post} />
+									</a>
+								</Link>
+							)
 						} else {
 							return null;
 						}

@@ -5,7 +5,7 @@ import remark from "remark";
 import html from "remark-html";
 import remarkUnwrapImages from 'remark-unwrap-images';
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(process.cwd(), "public/posts");
 
 export function getSortedPostsData() {
   // Get file names under /posts

@@ -60,7 +60,7 @@ export default function Home({ postData }) {
 				<div className="flex items-center justify-center flex-col bg-green-600">
 					<h1 className="text-white">Introduction</h1>
 					<Image src={"/images/BirdProfilePic.jpeg"} className="rounded-full" width={200} height={200} />
-					<p className="font-bold text-white mx-20 p-2">
+					<p className="font-bold text-white mx-20 p-2 text-center">
 						My name is Isaac Muscat and welcome to my site!
 						This site has a portfolio of some projects I have worked on
 						and a blog page where I document project work, my thoughts
@@ -71,10 +71,20 @@ export default function Home({ postData }) {
 				<div className="w-full flex justify-center">
 					<div className="bg-blue-600 rounded-lg border border-black-200 lg:w-3/5">
 						<h2 className="font-bold text-white text-center text-b text-7xl p-3">Blog</h2>
-						<div className="flex justify-between flex-col">
+						<div className="flex justify-between flex-col p-6 space-y-6">
 							{
-								postData.slice(0, 3).map((post) => (
-									<Post key={post.title} post={post}/>
+								postData.slice(0, 3).sort((post1, post2) => {
+									if(post1.title === "About"){
+										return -1
+									} else if(post1 === post2) {
+										return 0;
+									} else return (post1 > post2);
+								}).map((post) => (
+									<Link href={`/posts/${post.title}`}>
+										<a>
+											<Post key={post.title} post={post} />
+										</a>
+									</Link>
 								))
 							}
 						</div>
