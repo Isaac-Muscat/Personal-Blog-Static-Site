@@ -81,8 +81,8 @@ export default function Home({ postData }) {
 									} else return (post1 > post2);
 								}).map((post) => (
 									<Link href={`/posts/${post.title}`}>
-										<a>
-											<Post key={post.title} post={post} />
+										<a key={post.title}>
+											<Post post={post} />
 										</a>
 									</Link>
 								))

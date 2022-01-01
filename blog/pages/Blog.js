@@ -59,8 +59,8 @@ export default function Blog({postData}) {
 						if(isPostInSearch(post)){
 							return (
 								<Link href={`/posts/${post.title}`}>
-									<a>
-										<Post key={post.title} post={post} />
+									<a key={post.title}>
+										<Post post={post} />
 									</a>
 								</Link>
 							)
