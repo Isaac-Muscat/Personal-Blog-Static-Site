@@ -58,8 +58,8 @@ export default function Blog({postData}) {
 					postData.map(post => {
 						if(isPostInSearch(post)){
 							return (
-								<Link href={`/posts/${post.title}`}>
-									<a key={post.title}>
+								<Link key={post.title} href={`/posts/${post.title}`}>
+									<a>
 										<Post post={post} />
 									</a>
 								</Link>
