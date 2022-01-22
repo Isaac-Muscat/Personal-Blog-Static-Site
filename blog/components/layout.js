@@ -8,6 +8,7 @@ export default function Layout({ children }) {
     <nav className="bg-black items-center p-3">
       <Head>
 				<title>Isaac Muscat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
       <div className="justify-center space-x-10 w-full flex flex-wrap flex-row text-xl">
         <Link href="/">

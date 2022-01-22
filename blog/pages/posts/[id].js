@@ -28,9 +28,8 @@ export default function Post({ postData }) {
               }
           </div>
         </div>
-        <div className="flex flex-row">
-          <ReactMarkdown className="content-block py-4" components={components}>{postData.content}</ReactMarkdown>
-        </div>
+          <ReactMarkdown className="content-block max-w-full lg:w-3/4 xl:w-3/5 py-4" components={components}>{postData.content}</ReactMarkdown>
+        
       </div>
     </Layout>
   );
@@ -45,7 +44,9 @@ const components = {
       <SyntaxHighlighter
         language={c.className.split("-")[1]}
         showLineNumbers
-        lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
+        codeTagProps={{style: {
+          overflow: "scroll"
+        }}}
         wrapLines={true}
       >
         {c.children}

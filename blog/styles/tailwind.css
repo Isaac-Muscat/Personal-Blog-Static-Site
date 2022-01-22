@@ -27,7 +27,7 @@
 	}
 
 	h1, h2, h3, h4, p {
-		@apply my-2 py-2;
+		@apply my-2 py-2 break-words whitespace-pre-wrap;
 	}
 
 	h1 {

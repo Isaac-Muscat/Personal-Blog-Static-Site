@@ -55,7 +55,7 @@ I will admit, it took me a long time to figure out how these technologies worked
 * [Node Package Manager for information on specific packages](https://www.npmjs.com/)
 * [React Docs](https://reactjs.org/docs/getting-started.html)
 
-## Part 3: Blog Generator/Framework
+## Part 3: Blog Framework/Generator
 Let's start with the blog portion of the site.
 ### Markdown
 Most tutorials I looked at recommended using Markdown to create static blog sites. Markdown is a type of text based styling language that allows the writer to style text using symbols while typing text similar to that in a text editor. For example, here is some Markdown for this blog post:
