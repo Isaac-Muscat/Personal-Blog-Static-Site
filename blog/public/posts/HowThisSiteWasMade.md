@@ -11,7 +11,7 @@ tags: [
 ---
 
 # The Idea
-As discussed on the [about page](/posts/About), one of my friends inspired me to create a blog site and I really enjoy reading articles on sites such as [Medium.com](https://medium.com/). I had recently heard about the power of a web development technology called [NextJS](https://nextjs.org/) and decided to do some more research in September of 2021. For this site, I wanted a blog section to write articles as well as a project page to display my web-based projects and present my other technical projects.
+As discussed on the [about page](/posts/About), one of my friends inspired me to create a blog site and I really enjoy reading articles on sites such as [Medium.com](https://medium.com/). I had recently heard about the power of a web development technology called [NextJS](https://nextjs.org/) and decided to do some more research. For this site, I wanted a blog section to write articles as well as a project page to display my web-based projects and present my other technical projects.
 
 ## Step 1: The Technology
 After some more research on how to create a blog site, I found some possible options with some pros and cons.
@@ -21,7 +21,7 @@ After some more research on how to create a blog site, I found some possible opt
 * Pro: extremely popular with 43% of the web built on it
 * Pro: easy and streamlined tools to create and deploy the site
 * Pro: ability to add plugins
-* Con: not "Close to the Metal" (abstraction from lower level technology)
+* Con: not "Close to the Metal" (abstraction from lower level technology. Web technologies are notoriously high-level)
 * Con: less control (debatable)
 
 [GitHub Pages](https://pages.github.com/)
@@ -121,7 +121,7 @@ Now that we have some unstyled pages, it's time to add some organization and vis
 
 ![](../images/ThisSiteHomePage.png "Home Page")
 
-One thing that TailwindCSS makes easy is its ability to make pages easily responsive. Using flexbox and screen-size breakpoints (features of CSS and TailwindCSS) organized boxed layouts can be created that adapt to various screen sizes.
+One thing that TailwindCSS makes easy is its ability to make pages easily responsive. Using flexbox and screen-size breakpoints (features of CSS and TailwindCSS), organized boxed layouts can be created that adapt to various screen sizes.
 
 ## What About the Projects Page?
 The projects page will contain a bunch of small and large scale projects that run on the browser along with showcases for other projects that run on other technologies. I hope to continously build on this site and use it as a reference in the future.
