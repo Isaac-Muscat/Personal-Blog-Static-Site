@@ -1,7 +1,7 @@
 ---
 title: "Maintaining Good Health"
 date: "2022-09-26"
-#coverImage: "/images/HealthPyramid.jpg"
+coverImage: "/images/HealthPyramid.jpg"
 tags: [
 	"health",
 	"opinion"
