@@ -1,7 +1,7 @@
 ---
-title: "Basic Minecraft Copy in C++"
+title: "Basic Minecraft Clone in C++"
 date: "2022-06-01"
-coverImage: "/images/BabyMinecraft1.png"
+coverImage: "/images/BabyMinecraftThumbnail1.png"
 tags: [
 	"project"
 ]
