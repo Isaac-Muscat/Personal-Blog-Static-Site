@@ -3,7 +3,11 @@ title: "Basic Minecraft Clone in C++"
 date: "2022-06-01"
 coverImage: "/images/BabyMinecraftThumbnail1.png"
 tags: [
-	"project"
+	"project",
+	"Graphics",
+	"OpenGL",
+	"C++"
+
 ]
 ---
 

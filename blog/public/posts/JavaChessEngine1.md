@@ -3,7 +3,8 @@ title: "Java Chess Engine"
 date: "2021-01-01"
 coverImage: "/images/JavaChessGUIScreenshot.png"
 tags: [
-	"project"
+	"project",
+	"Java"
 ]
 ---
 

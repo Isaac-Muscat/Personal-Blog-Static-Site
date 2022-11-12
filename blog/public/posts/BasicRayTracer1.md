@@ -3,7 +3,9 @@ title: "Basic Ray Tracer in C++"
 date: "2022-11-01"
 coverImage: "/images/RayTracingDark1.png"
 tags: [
-	"project"
+	"project",
+	"Graphics",
+	"C++"
 ]
 ---
 
