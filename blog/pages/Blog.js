@@ -33,7 +33,7 @@ export default function Blog({postData}) {
 
   return <Layout>
 	<div className="w-full flex flex-col items-center justify-center">
-		<div className="bg-blue-600 rounded-lg border border-black-200 lg:w-3/5">
+		<div className="bg-green-600 rounded-lg border border-black-200 lg:w-3/5">
 			<h2 className="font-bold text-white text-center text-b text-7xl p-3">Blog</h2>
 			<form className="flex flex-row space-x-3 items-center p-2 bg-green-500 border-white border-2 m-6 rounded">
 				<label className="text-white text-2xl text-bold" htmlFor="tag">Search </label>
@@ -76,7 +76,9 @@ export default function Blog({postData}) {
 }
 
 export async function getStaticProps() {
-	const postData = getSortedPostsData();
+	const postData = getSortedPostsData().filter((post) => {
+		return !post.tags.includes("project");
+	});
 
 	return {
 		props: {

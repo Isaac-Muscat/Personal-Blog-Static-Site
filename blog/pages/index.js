@@ -70,12 +70,33 @@ export default function Home({ postData }) {
 				<br />
 				<div className="w-full flex justify-center">
 					<div className="bg-blue-600 rounded-lg border border-black-200 lg:w-3/5">
+						<h2 className="font-bold text-white text-center text-b text-7xl p-3">Projects</h2>
+						<div className="flex justify-between flex-col p-6 space-y-6">
+							{
+								postData.filter((post) => {
+									return post.tags.includes("project");
+								}).map((post) => (
+									<Link key={post.title} href={`/posts/${post.title}`}>
+										<a>
+											<Post post={post} />
+										</a>
+									</Link>
+								)).slice(0,3)
+							}
+						</div>
+					</div>
+				</div>
+				<br />
+				<div className="w-full flex justify-center">
+					<div className="bg-green-600 rounded-lg border border-black-200 lg:w-3/5">
 						<h2 className="font-bold text-white text-center text-b text-7xl p-3">Blog</h2>
 						<div className="flex justify-between flex-col p-6 space-y-6">
 							{
-								postData.slice(0, 3).sort((post1, post2) => {
+								postData.filter((post) => {
+									return !post.tags.includes("project");
+								}).sort((post1, post2) => {
 									if(post1.title === "About"){
-										return -1
+										return -1;
 									} else if(post1 === post2) {
 										return 0;
 									} else return (post1 > post2);
@@ -85,15 +106,9 @@ export default function Home({ postData }) {
 											<Post post={post} />
 										</a>
 									</Link>
-								))
+								)).slice(0,3)
 							}
 						</div>
-					</div>
-				</div>
-				<div className="bg-white text-b m-3">
-					<h2 className="font-bold text-center text-b text-7xl p-3">Projects</h2>
-					<div className="flex justify-around flex-wrap">
-						<p className="text-lg text-b">Coming Soon...</p>
 					</div>
 				</div>
 			</div>
