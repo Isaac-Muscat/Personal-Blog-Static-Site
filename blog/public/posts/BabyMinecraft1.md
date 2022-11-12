@@ -17,4 +17,4 @@ This version has:
 3. Texture atlas to support hundreds of textures and block types
 
 ## The Code
-You can view the github repository for this basic ray tracer here at [github.com/Isaac-Muscat/BabyMinecraft](https://github.com/Isaac-Muscat/BabyMinecraft).
+You can view the github repository for this basic minecraft clone here at [github.com/Isaac-Muscat/BabyMinecraft](https://github.com/Isaac-Muscat/BabyMinecraft).
