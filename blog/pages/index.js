@@ -48,7 +48,7 @@ export default function Home({ postData }) {
 									GitHub
 								</a>
 							</Link>
-							<Link href="https://www.linkedin.com/in/isaac-muscat-joy/">
+							<Link href="https://www.linkedin.com/in/isaac-muscat/">
 							<a className="navbtn text-black bg-white flex">
 								<Image src="/images/LinkedIn-Icon.png" width={40} height={40} />
 								&nbsp; LinkedIn
